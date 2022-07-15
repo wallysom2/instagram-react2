@@ -1,5 +1,5 @@
 
-const dadosPosts = [
+const dataPosts = [
   {
     imgUsuario: "assets/img/meowed.svg",
     imgConteudo: "assets/img/gato-telefone.svg",
@@ -21,12 +21,12 @@ function Posts(props) {
     return (
       <div className="posts">
 
-        {dadosPosts.map(dado => (
+        {dataPosts.map(data => (
            <div class="post">
            <div class="topo">
              <div class="usuario">
-               <img src={dado.imgUsuario} />
-              {dado.nomeUsuario}
+               <img src={data.imgUsuario} />
+              {data.nomeUsuario}
              </div>
              <div class="acoes">
                <ion-icon name="ellipsis-horizontal"></ion-icon>
@@ -34,7 +34,7 @@ function Posts(props) {
            </div>
 
            <div class="conteudo">
-             <img src= {dado.imgConteudo} />
+             <img src= {data.imgConteudo} />
            </div>
 
            <div class="fundo">
@@ -50,9 +50,9 @@ function Posts(props) {
              </div>
 
              <div class="curtidas">
-               <img src={dado.imgQuemCurtiu} />
+               <img src={data.imgQuemCurtiu} />
                <div class="texto">
-                 Curtido por <strong>{dado.quemCurtiu}</strong> e <strong>outras 101.523 pessoas</strong>
+                 Curtido por <strong>{data.quemCurtiu}</strong> e <strong>outras 101.523 pessoas</strong>
                </div>
              </div>
            </div>

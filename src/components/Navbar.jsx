@@ -1,6 +1,4 @@
-
 function Navbar() {
-
   return (
     <div class="navbar">
       <div class="container">

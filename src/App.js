@@ -1,4 +1,5 @@
 import React from "react"
+
 import Stories from "./components/Stories"
 import Navbar from "./components/Navbar";
 import Posts from "./components/Posts";
@@ -15,7 +16,6 @@ function App() {
                 </div>
                 <Sidebar />
             </div>
-
             <div class="fundo-mobile">
                 <ion-icon name="home"></ion-icon>
                 <ion-icon name="search-outline"></ion-icon>
