@@ -1,4 +1,7 @@
-<div class="sidebar">
+function Sidebar (){
+  
+  return (
+    <div class="sidebar">
 <div class="usuario">
   <img src="assets/img/catanacomics.svg" />
   <div class="texto">
@@ -82,3 +85,7 @@
   © 2021 INSTAGRAM DO FACEBOOK
 </div>
 </div>
+  )
+}
+
+export default Sidebar
