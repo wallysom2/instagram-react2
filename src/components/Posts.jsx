@@ -1,73 +1,67 @@
-<div class="posts">
-<div class="post">
-  <div class="topo">
-    <div class="usuario">
-      <img src="assets/img/meowed.svg" />
-      meowed
-    </div>
-    <div class="acoes">
-      <ion-icon name="ellipsis-horizontal"></ion-icon>
-    </div>
-  </div>
 
-  <div class="conteudo">
-    <img src="assets/img/gato-telefone.svg" />
-  </div>
+const dadosPosts = [
+  {
+    imgUsuario: "assets/img/meowed.svg",
+    imgConteudo: "assets/img/gato-telefone.svg",
+    imgQuemCurtiu: "assets/img/barked.svg",
+    nomeUsuario: "meowed",
+    quemCurtiu:'respondeai'
+  },
+  {
+    imgUsuario: "assets/img/bad.vibes.memes.svg",
+    imgConteudo: "assets/img/dog.svg",
+    imgQuemCurtiu: "assets/img/smallcutecats.svg",
+    nomeUsuario: "bad.vibes.memes",
+    quemCurtiu:'adorable_animals'
+  }
+]
 
-  <div class="fundo">
-    <div class="acoes">
-      <div>
-        <ion-icon name="heart-outline"></ion-icon>
-        <ion-icon name="chatbubble-outline"></ion-icon>
-        <ion-icon name="paper-plane-outline"></ion-icon>
-      </div>
-      <div>
-        <ion-icon name="bookmark-outline"></ion-icon>
-      </div>
-    </div>
 
-    <div class="curtidas">
-      <img src="assets/img/respondeai.svg" />
-      <div class="texto">
-        Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
-      </div>
-    </div>
-  </div>
-</div>
+function Posts(props) {
+    return (
+      <div className="posts">
 
-<div class="post">
-  <div class="topo">
-    <div class="usuario">
-      <img src="assets/img/barked.svg" />
-      barked
-    </div>
-    <div class="acoes">
-      <ion-icon name="ellipsis-horizontal"></ion-icon>
-    </div>
-  </div>
+        {dadosPosts.map(dado => (
+           <div class="post">
+           <div class="topo">
+             <div class="usuario">
+               <img src={dado.imgUsuario} />
+              {dado.nomeUsuario}
+             </div>
+             <div class="acoes">
+               <ion-icon name="ellipsis-horizontal"></ion-icon>
+             </div>
+           </div>
 
-  <div class="conteudo">
-    <img src="assets/img/dog.svg" />
-  </div>
+           <div class="conteudo">
+             <img src= {dado.imgConteudo} />
+           </div>
 
-  <div class="fundo">
-    <div class="acoes">
-      <div>
-        <ion-icon name="heart-outline"></ion-icon>
-        <ion-icon name="chatbubble-outline"></ion-icon>
-        <ion-icon name="paper-plane-outline"></ion-icon>
-      </div>
-      <div>
-        <ion-icon name="bookmark-outline"></ion-icon>
-      </div>
-    </div>
+           <div class="fundo">
+             <div class="acoes">
+               <div>
+                 <ion-icon name="heart-outline"></ion-icon>
+                 <ion-icon name="chatbubble-outline"></ion-icon>
+                 <ion-icon name="paper-plane-outline"></ion-icon>
+               </div>
+               <div>
+                 <ion-icon name="bookmark-outline"></ion-icon>
+               </div>
+             </div>
 
-    <div class="curtidas">
-      <img src="assets/img/adorable_animals.svg" />
-      <div class="texto">
-        Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
-      </div>
-    </div>
-  </div>
-</div>
-</div>                                                                                                                                                                                                                                                                                                                                                                                      
+             <div class="curtidas">
+               <img src={dado.imgQuemCurtiu} />
+               <div class="texto">
+                 Curtido por <strong>{dado.quemCurtiu}</strong> e <strong>outras 101.523 pessoas</strong>
+               </div>
+             </div>
+           </div>
+           </div>
+           ))}
+        </div>
+      )
+    }
+
+    export default Posts
+
+

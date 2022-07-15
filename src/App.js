@@ -1,6 +1,7 @@
 import React from "react"
 import Stories from "./components/Stories"
 import Navbar from "./components/Navbar";
+import Posts from "./components/Posts";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
             </div>
             <Navbar />
             <Stories />
+            <Posts/>
         </div>
     )
 }
