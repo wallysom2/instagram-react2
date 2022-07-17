@@ -1,3 +1,4 @@
+import React,{useState} from "react";
 
 const dataPosts = [
   {
@@ -17,7 +18,14 @@ const dataPosts = [
 ]
 
 
-function Posts(props) {
+function Posts() {
+
+  const [state, setState] = useState(false)
+
+function toggle(){
+  setState(!state)
+}
+
     return (
       <div className="posts">
 
@@ -40,7 +48,7 @@ function Posts(props) {
            <div class="fundo">
              <div class="acoes">
                <div>
-                 <ion-icon name="heart-outline"></ion-icon>
+                 <ion-icon name="heart-outline" onClick = {toggle}  class =  { (state ? 'foiCurtido' : '') + " md hydrated" } ></ion-icon>
                  <ion-icon name="chatbubble-outline"></ion-icon>
                  <ion-icon name="paper-plane-outline"></ion-icon>
                </div>
