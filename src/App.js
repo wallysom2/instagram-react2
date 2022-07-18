@@ -7,16 +7,16 @@ import Sidebar from "./components/Sidebar";
 
 function App() {
     return (
-        <div class="root">
+        <div className="root">
             <Navbar />
-            <div class="corpo">
-                <div class="esquerda">
+            <div className="corpo">
+                <div className="esquerda">
                     <Stories />
                     <Posts />
                 </div>
                 <Sidebar />
             </div>
-            <div class="fundo-mobile">
+            <div className="fundo-mobile">
                 <ion-icon name="home"></ion-icon>
                 <ion-icon name="search-outline"></ion-icon>
                 <ion-icon name="add-circle-outline"></ion-icon>

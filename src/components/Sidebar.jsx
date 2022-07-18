@@ -9,41 +9,41 @@ const dataSidebar = [
 function Sidebar() {
 
   return (
-    <div class="sidebar">
-      <div class="usuario">
+    <div className="sidebar">
+      <div className="usuario">
         <img src="assets/img/catanacomics.svg" />
-        <div class="texto">
+        <div className="texto">
           <strong>catanacomics</strong>
           Catana
         </div>
       </div>
 
-      <div class="sugestoes">
-        <div class="titulo">
+      <div className="sugestoes">
+        <div className="titulo">
           Sugestões para você
           <div>Ver tudo</div>
         </div>
 
         {dataSidebar.map(function (dado) {
             return (
-              <div class="sugestao">
-                <div class="usuario">
+              <div className="sugestao" key = {dado.nome}>
+                <div className="usuario">
                   <img src={dado.img} />
-                  <div class="texto">
-                    <div class="nome">{dado.nome}</div>
-                    <div class="razao">{dado.razao}</div>
+                  <div className="texto">
+                    <div className="nome">{dado.nome}</div>
+                    <div className="razao">{dado.razao}</div>
                   </div>
                 </div>
-                <div class="seguir">Seguir</div>
+                <div className="seguir">Seguir</div>
               </div>
             )
           })}
 
-        <div class="links">
+        <div className="links">
           Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
         </div>
 
-        <div class="copyright">
+        <div className="copyright">
           © 2021 INSTAGRAM DO FACEBOOK
         </div>
       </div>

@@ -11,16 +11,16 @@ const dataStories = [
 
 function Stories() {
   return (
-    <div class="stories">
+    <div className="stories">
       {dataStories.map(dado => (
-        <div class="story">
-          <div class="imagem">
+        <div key = {dado.nome} className="story">
+          <div className="imagem">
             <img src={dado.img} /></div>
-          <div class="usuario">  {dado.nome}  </div>
+          <div className="usuario">  {dado.nome}  </div>
         </div>
       ))}
 
-      <div class="setinha">
+      <div className="setinha">
         <ion-icon name="chevron-forward-circle"></ion-icon>
       </div>
 
