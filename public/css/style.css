@@ -310,7 +310,7 @@ body {
 .logo-mobile, .instagram-mobile {
   display: none !important;
 }
-.foiCurtido {
+ion-icon [name="heart"] {
   color: red;
 }
 

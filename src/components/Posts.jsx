@@ -4,8 +4,8 @@ export default function Posts() {
     const dados = 
 
     [
-      {userName:"meowed", imgPost:"gato-telefone", userLike:"respondeai", NumLike:"101.523"}, 
-      {userName:"barked", imgPost:"dog", userLike:"adorable_animals", NumLike:"99.159"}
+      {userName:"meowed", imgPost:"gato-telefone", userLike:"respondeai", numberLikes:"101.523"}, 
+      {userName:"barked", imgPost:"dog", userLike:"adorable_animals", numberLikes:"99.159"}
     ];
 
     function Post(props) {
@@ -24,25 +24,16 @@ export default function Posts() {
                 </div>
   
                 <div class="conteudo" onDoubleClick={() => {
-                            if (like === "heart-outline") {
-                            setLike("heart");
-                            } else {
-                            setLike("heart-outline");
-                            }
+                           like === "heart-outline" ? setLike("heart") : setLike("heart-outline");
                         }}>
                   <img src={`assets/img/${props.imgConteudo}.svg`}/>
                 </div>
-  
                 <div class="fundo">
                   <div class="acoes">
                     <div>
                       <ion-icon name={like}
                         onClick={() => {
-                            if (like === "heart-outline") {
-                            setLike("heart");
-                            } else {
-                            setLike("heart-outline");
-                            }
+                            like === "heart-outline" ? setLike("heart") : setLike("heart-outline");
                         }}>
                       </ion-icon>
                       <ion-icon name="chatbubble-outline"></ion-icon>
@@ -65,7 +56,7 @@ export default function Posts() {
     }
     return (
         <div class="posts">
-            {dados.map(post=> <Post user={post.userName} imgConteudo={post.imgPost} userLike={post.userLike} num={post.NumLike}/>)}
+            {dados.map(post=> <Post user={post.userName} imgConteudo={post.imgPost} userLike={post.userLike} num={post.numberLikes}/>)}
         </div>
     )
     }
